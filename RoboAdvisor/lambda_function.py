@@ -53,7 +53,7 @@ def validate_data(age, investment_amount, intent_request):
         if investment_amount < 5000:
             return build_validation_result(
                 False,
-                "investment_amount",
+                "investmentAmount",
                 "This advisory service requires an investment of at least 5000."
                 )
                 
@@ -155,7 +155,7 @@ def recommend_portfolio(intent_request):
     # Get the initial investment recommendation
 
     ### YOUR FINAL INVESTMENT RECOMMENDATION CODE STARTS HERE ###
-
+    
     ### YOUR FINAL INVESTMENT RECOMMENDATION CODE ENDS HERE ###
 
     # Return a message with the initial recommendation based on the risk level.

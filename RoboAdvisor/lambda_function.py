@@ -12,6 +12,23 @@ def parse_int(n):
     except ValueError:
         return float("nan")
 
+def investment_recommendation(risk_level):
+    """
+    Provides investment recommendation based on the selected risk level by the user
+    """
+    if risk_level == "None":
+        initial_recommendation = "100% bonds (AGG), 0% equities (SPY)"
+    if risk_level == "Very Low":
+        initial_recommendation = "80% bonds (AGG), 20% equities (SPY)"
+    if risk_level == "Low":
+        initial_recommendation = "60% bonds (AGG), 40% equities (SPY)"
+    if risk_level == "Medium":
+        initial_recommendation = "40% bonds (AGG), 60% equities (SPY)"
+    if risk_level == "High":
+        initial_recommendation = "20% bonds (AGG), 80% equities (SPY)"
+    if risk_level == "Very High":
+        initial_recommendation = "0% bonds (AGG), 100% equities (SPY)"
+    return initial_recommendation
 
 def build_validation_result(is_valid, violated_slot, message_content):
     """
@@ -155,7 +172,7 @@ def recommend_portfolio(intent_request):
     # Get the initial investment recommendation
 
     ### YOUR FINAL INVESTMENT RECOMMENDATION CODE STARTS HERE ###
-    
+    initial_recommendation = investment_recommendation(risk_level)
     ### YOUR FINAL INVESTMENT RECOMMENDATION CODE ENDS HERE ###
 
     # Return a message with the initial recommendation based on the risk level.

@@ -16,6 +16,8 @@ def investment_recommendation(risk_level):
     """
     Provides investment recommendation based on the selected risk level by the user
     """
+
+    # Make recommendation based on user selected risk level
     if risk_level == "None":
         initial_recommendation = "100% bonds (AGG), 0% equities (SPY)"
     if risk_level == "Very Low":
@@ -173,6 +175,7 @@ def recommend_portfolio(intent_request):
 
     ### YOUR FINAL INVESTMENT RECOMMENDATION CODE STARTS HERE ###
     initial_recommendation = investment_recommendation(risk_level)
+    
     ### YOUR FINAL INVESTMENT RECOMMENDATION CODE ENDS HERE ###
 
     # Return a message with the initial recommendation based on the risk level.
